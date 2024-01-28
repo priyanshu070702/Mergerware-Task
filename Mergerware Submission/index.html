@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Loan Application</title>
+</head>
+<body>
+    <div class="forms">
+        <h1>Loan Application (Borrowing and Lending)</h1>
+        <div class="main">
+        <div id="register-form" class="form animated fadeIn">
+            <h2>Register</h2>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="role">Role:</label>
+            <select id="role" required>
+                <option value="admin">Admin</option>
+                <option value="borrower">Borrower</option>
+                <option value="lender">Lender</option>
+            </select>
+            <button class="bn30" onclick="registerUser()"><span class="text">Register</span></button>
+        </div>
+
+        <!-- Loan Request Form -->
+        <div id="loan-request-form" class="form animated fadeIn">
+            <h2>Request Loan</h2>
+            <label for="amount">Loan Amount ($):</label>
+            <input type="number" id="amount" required>
+            <button class="bn30" onclick="requestLoan()"><span class="text">Request Loan</span></button>
+        </div>
+
+        <!-- Confirm Payment Form -->
+        <div id="confirm-payment-form" class="form animated fadeIn">
+            <h2>Confirm Payment</h2>
+            <label for="payment-amount">Payment Amount ($):</label>
+            <input type="number" id="payment-amount" required>
+            <button class="bn30" onclick="confirmPayment()"><span class="text">Confirm Payment</span></button>
+        </div>
+        </div>
+    </div>
+    <div id="app">
+        <div id="user-container" class="container">
+            <h2>Users</h2>
+            <ul id="user-list"></ul>
+        </div>
+
+        <div id="loan-container" class="container">
+            <h2>Loans</h2>
+            <ul id="loan-list"></ul>
+        </div>
+
+        <div id="payment-container" class="container">
+            <h2>Payments</h2>
+            <ul id="payment-list"></ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
